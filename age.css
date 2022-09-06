@@ -1,0 +1,172 @@
+*::before,*::after{
+    box-sizing: border-box;
+}
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle, #7FBCD2 0%,
+     #A5F1E9 100%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+     
+     font-family: 'Patua One', cursive;
+     font-size: 20px;
+}
+.box{
+    position: relative;
+    width: 786px;
+    padding: 20px;
+    background: rgba( 255, 238, 175, 0.45 );
+    box-shadow: 0 8px 20px 0 rgba(67, 71, 119, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.box h4{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.box .date-time{
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: rgb(65, 65, 65);
+    margin-bottom: 20px;
+    transition: width 500ms ease ;
+    
+}
+.box .date-time input{
+    margin: 0 10px;
+    border: 0;
+    font-size: 20px;
+    padding: .5rem;
+    border-radius: 10px;
+    transition:box-shadow 500ms ease;
+    margin-left: 40px;
+    
+}
+.box .date-time input:focus{
+    box-shadow: 0 0 10px  black;
+    outline: none;
+}
+.box .date-time span{
+        display: inline-block;
+        text-transform: uppercase;
+}
+.box .date-time span#choseDate{
+    margin-left: auto;      
+}
+.age-calc{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    transition: max-height 2s , opacity 3s , margin 250ms ease;
+
+}
+.age-calc.expend{
+    margin-top: 30px;
+    max-height: 1000px;
+    opacity: 1;    
+}
+.age-calc .age-box{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    width: 222px;
+    transition: 500ms ease;
+}
+.age-calc .age-box p.header {
+    position: relative;
+    text-align: center;
+    background-color: rgb(99, 64, 10);
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    font-size: 1.2rem;
+    font-size: 500;
+    text-transform: uppercase;
+    color: white;
+}
+.age-calc .age-box .value{
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1.5rem;
+    transition: 500ms ease;
+
+}
+
+@media (max-width : 768px){
+    body{
+        display: block;
+        margin: 2rem 0 ;    
+    }
+    .box{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .age-calc .age-box{
+        width: 150px;
+        margin: 15px;
+    }
+    .age-calc .age-box p.header{
+        padding: 10px 20px;
+        font-size: 1rem;
+
+    }
+    .age-calc .age-box .value{
+        padding: 30px 20px;
+        font-size: 1rem;
+    }
+
+}
+@media (max-width:600px){
+    .box{
+        width: 300px;
+    }
+    .box .date-time{
+        display: block;
+
+    }
+    .box .date-time input{
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .box .date-time span{
+        display:block;
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+    .age-calc .age-box{
+        width: 119px;
+        margin: 5px;
+    }
+    .age-calc .age-box p.header{
+        padding: 10px 5px;
+        font-size: 0.8rem;
+
+    }
+    .age-calc .age-box .value{
+        padding: 25px 5px;
+        font-size: .9rem;
+    }
+}
